@@ -1,0 +1,9 @@
+[install]
+exact = false
+
+[bundle.alias]
+src = "./src"
+
+[run]
+preload = ["./preload.js"]
+
