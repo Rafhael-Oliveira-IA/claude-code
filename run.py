@@ -89,7 +89,7 @@ def cmd_proxy():
     print("  Proxy Anthropic->OpenAI em :4000")
     print("  Deixe este terminal aberto e abra outro para rodar: python run.py")
     print()
-    os.execv(str(PYTHON), [str(PYTHON), str(proxy_script)])
+    subprocess.run([str(PYTHON), str(proxy_script)])
 
 
 def cmd_run(extra_args: list):
@@ -116,7 +116,7 @@ def cmd_run(extra_args: list):
         str(ROOT / "src" / "entrypoints" / "cli.tsx"),
     ] + extra_args
 
-    os.execv(str(BUN), cmd)
+    sys.exit(subprocess.run(cmd).returncode)
 
 
 # ---------------------------------------------------------------------------
