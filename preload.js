@@ -4,6 +4,6 @@
  */
 // @ts-ignore
 globalThis.MACRO = {
-  VERSION: '1.0.0-local',
+  VERSION: '1.0.99-local',
   BUILD_TIME: new Date().toISOString(),
 }
